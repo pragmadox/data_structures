@@ -1,0 +1,4 @@
+$> make -f labyrinth.make
+$> labyrinth
+$> make -f labyrinth.make clean
+$> makefile

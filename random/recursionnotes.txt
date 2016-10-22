@@ -1,0 +1,28 @@
+Some more details on the recursive solution:
+
+//call the function with the coordinates of the entrance point
+int recursive_solve(  int x, int y )
+{
+    
+    private: //this function can be private in the class
+    
+    int success = 0;
+    switch( labyrinth[x][y])
+        case '|': success = 1;
+            break;
+        case '*': success = 0;
+            break;
+        case 'T': success=0;
+            break;
+        default: cells[x][y] = 'T';
+        success = recursive_solve(x+1, y) + recursive_solve(x, y+1) + recursive_solve(x-1, y) + recursive_solve(x, y-1);
+            break;
+
+    if(success>0)
+        cout << x << "," << y << endl;
+    
+    return(success);
+}
+
+Class implementation for the project:
+    Files: maze.h, maze.cpp, labyrinth.cpp, labyrinth.make (or assemble the project by hand)
