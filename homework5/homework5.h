@@ -1,3 +1,9 @@
+/*  Jay Price
+    Homework 5
+    Data Structures
+    October 21, 2016
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <sstream>

@@ -1,3 +1,9 @@
+/*  Jay Price
+    Homework 5
+    Data Structures
+    October 21, 2016
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <sstream>
@@ -233,26 +239,25 @@ int Maze::solve(int x, int y)
             //The default case for the switch statement places a 'T' for traversed
             //wherever the function has already examined.
             default: labyrinth[x][y] = 'T';
-
-            if(x==0 && y==0)
-                success = this->solve(x+1, y) + this->solve(x, y+1);
-                else 
-                    if(x==SIZE && y==0)
-                        success = this->solve(x, y+1) + this->solve(x-1, y);
-                        else 
-                            if (x==0 && y==SIZE)
-                                success = this->solve(x+1, y) + this->solve(x, y-1);
-                                else 
-                                    if (x==SIZE && y==SIZE)
-                                        success = this->solve(x-1, y) + this->solve(x, y-1);
-                                        else 
-                                            if (x==0)
-                                                success = this->solve(x+1, y) + this->solve(x, y+1) + this->solve(x, y-1);
-                                                else 
-                                                    if (y==0)
-                                                        success = this->solve(x+1, y) + this->solve(x, y+1) + this->solve(x-1, y);
-                                                        else
-                                                            success = this->solve(x+1, y) + this->solve(x, y-1) + this->solve(x, y+1) + this->solve(x-1, y);
+                if(x==0 && y==0)
+                    success = this->solve(x+1, y) + this->solve(x, y+1);
+                    else 
+                        if(x==SIZE && y==0)
+                            success = this->solve(x, y+1) + this->solve(x-1, y);
+                            else 
+                                if (x==0 && y==SIZE)
+                                    success = this->solve(x+1, y) + this->solve(x, y-1);
+                                    else 
+                                        if (x==SIZE && y==SIZE)
+                                            success = this->solve(x-1, y) + this->solve(x, y-1);
+                                            else 
+                                                if (x==0)
+                                                    success = this->solve(x+1, y) + this->solve(x, y+1) + this->solve(x, y-1);
+                                                    else 
+                                                        if (y==0)
+                                                            success = this->solve(x+1, y) + this->solve(x, y+1) + this->solve(x-1, y);
+                                                            else
+                                                                success = this->solve(x+1, y) + this->solve(x, y-1) + this->solve(x, y+1) + this->solve(x-1, y);
                 break;
         }
         if(success>0)
@@ -261,7 +266,9 @@ int Maze::solve(int x, int y)
             solution.x = x;
             solution.y = y;
             coords last_point;
-            last_point = top();
+            if(!is_empty())
+                last_point = top();
+            push(solution);
              
             if(solution.x-last_point.x==1)
                 labyrinth[solution.x][solution.y] = 'U';
@@ -273,9 +280,7 @@ int Maze::solve(int x, int y)
                                 labyrinth[solution.x][solution.y]= 'L';
                                 else
                                     if(solution.y-last_point.y==-1)
-                                        labyrinth[solution.x][solution.y]= 'R';
-            
-            push(solution);
+                                        labyrinth[solution.x][solution.y]= 'R';    
         }
     //The function will either loop indefinitely or return success (assuming the maze
     //is navigable.)

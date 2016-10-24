@@ -1,3 +1,9 @@
+/*  Jay Price
+    Homework 5
+    Data Structures
+    October 21, 2016
+*/
+
 #include <stdio.h>
 #include <iostream>
 #include <iomanip>
@@ -28,7 +34,6 @@ cout << "Row index: ";
 cin >> entrypoint.x;
 cout << "Column index: ";
 cin >> entrypoint.y;
-maze1.push(entrypoint);
 cout << endl;
 
 //Provide the solve function the entrance point.
