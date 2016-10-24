@@ -25,7 +25,6 @@ class Maze
 {
     
     public:
-
         int is_empty();
         int is_full();
         coords top();
