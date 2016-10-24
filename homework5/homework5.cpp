@@ -284,6 +284,8 @@ int Maze::solve(int x, int y)
 
 void Maze::print_path()
 {
+    cout << "-----------------------------------------------------------------------" << endl;
+    cout << "The path from entry to exit for the maze includes the following points:" << endl << endl; 
     while(!is_empty())
     {
         coords point = top();
