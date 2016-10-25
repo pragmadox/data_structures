@@ -1,3 +1,10 @@
+/*
+    Jay Price
+    Data Structures
+    Homework 3
+    October 13, 2016
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>

@@ -1,3 +1,10 @@
+/*
+    Jay Price
+    Data Structures
+    Homework 4
+    October 19, 2016
+*/
+
 #include<limits.h>
 #include<iostream>
 #include<vector>
