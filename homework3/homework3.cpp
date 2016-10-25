@@ -1,3 +1,10 @@
+/* 
+    Jay Price
+    Data Structures
+    Homework 3
+    October 13, 2016
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>
@@ -11,7 +18,7 @@ unsigned int seed = 17;
 
 int is_empty()
 {
-    if( current_size == -1)
+    if(current_size == -1)
         return 1;
         else 
             return 0;
@@ -19,7 +26,7 @@ int is_empty()
 
 int is_full()
 {
-    if( current_size == MAXSIZE)
+    if(current_size == MAXSIZE)
         return 1;
         else
             return 0;
