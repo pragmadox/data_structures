@@ -1,0 +1,31 @@
+Test Output:
+
+jay@jay-VirtualBox:~/Github/data_structures/homework3$ g++ homework3.cpp -o homework3              
+jay@jay-VirtualBox:~/Github/data_structures/homework3$ ./homework3                                 
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+Could not insert data. Stack is full.                                                              
+1                                                                                                  
+1                                                                                                  
+1                                                                                                  
+1                                                                                                  
+1                                                                                                  
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+Could not retrieve data. Stack is empty.                                                           
+                                                                                                   
+Could not retrieve data. Stack is empty.
