@@ -1,3 +1,10 @@
+/*
+    Jay Price
+    Data Structures
+    Homework 3
+    October 13, 2016
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>
@@ -11,7 +18,7 @@ unsigned int seed = 17;
 
 int is_empty()
 {
-    if( current_size == -1)
+    if(current_size == -1)
         return 1;
         else 
             return 0;
@@ -19,7 +26,7 @@ int is_empty()
 
 int is_full()
 {
-    if( current_size == MAXSIZE)
+    if(current_size == MAXSIZE)
         return 1;
         else
             return 0;
@@ -78,16 +85,19 @@ int main()
     }
 
     //for testing top function when not empty
-    int last_element = top();
-    cout << last_element << endl;
+    for(int i=0; i<5; i++)
+    {
+        int last_element = top();
+        cout << last_element << endl;
+    }
 
     //for testing pop function and 'is_empty' function
     for( int i=1; i<20; i++)
         pop();
+    cout << endl;
 
     //for testing top function when empty
-    last_element = top();
-    cout << last_element;
+    int last_element = top();
 
 }
 

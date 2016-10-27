@@ -1,3 +1,11 @@
+/* 
+    Jay Price
+    Data Structures
+    Homework 6
+    October 20, 2016
+*/
+
+//File: stack1.h
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>

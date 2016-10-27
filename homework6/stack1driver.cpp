@@ -1,3 +1,10 @@
+/* 
+    Jay Price
+    Data Structures
+    Homework 6
+    October 20, 2016
+*/
+
 //File stack1driver.cpp
 #include <iostream>
 #include <iomanip>
