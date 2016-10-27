@@ -1,3 +1,10 @@
+/* 
+    Jay Price
+    Data Structures
+    Homework 6
+    October 20, 2016
+*/
+
 //File: stack1.cpp
 #include <iostream>
 #include <iomanip>
