@@ -1,13 +1,20 @@
+/* 
+    Jay Price
+    Data Structures
+    Homework 5
+    October 26, 2016
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <vector>
 #include <algorithm>
 using namespace std;
 
-const int SIZE=6;
+const int SIZE=10;
 double random( unsigned int &seed);
 void print_array(int a[]);
-void copy_array_to_vector(int a, vector<int> &v);
+void copy_array_to_vector(int a[], vector<int> &v);
 void print_vector(vector<int> v);
 bool cmp(const int &m, const int &n);
 
