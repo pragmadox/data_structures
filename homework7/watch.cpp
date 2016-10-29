@@ -1,3 +1,12 @@
+/* 
+    Jay Price
+    Data Structures
+    Homework 7
+    October 29, 2016
+*/
+
+//File: watch.cpp
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

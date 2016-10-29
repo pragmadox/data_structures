@@ -1,44 +1,108 @@
 /* 
     Jay Price
-    Data Structures
-    Homework 5
-    October 26, 2016
+    Data valuess
+    Homework 8
+    October 30, 2016
 */
 
+#include <limits.h>
 #include <iostream>
-#include <iomanip>
+#include <fstream>
+#include <sstream>
 #include <vector>
+#include <iomanip>
+#include <stdio.h>
 #include <algorithm>
+
 using namespace std;
 
+struct values
+{
+    int m;
+    double x;
+};
+
+unsigned int seed = (unsigned int)time(0);
 const int SIZE=10;
-double random( unsigned int &seed);
-void print_array(int a[]);
-void copy_array_to_vector(int a[], vector<int> &v);
-void print_vector(vector<int> v);
-bool cmp(const int &m, const int &n);
+double random(unsigned int&);
+void copy_array_to_vector(int[], double[], vector<values>&);
+void print_vector(vector<values>);
+bool cmpint(const values&, const values&);
+bool cmpdouble(const values&, const values&);
 
 int main()
 {
-    vector<int>::iterator beginning, ending;
-    vector<int> v, w;
-    int arr[SIZE] = {1, 11, 3, 3, 2, 6, 9, 7};
-    copy_array_to_vector(array, v);
+    vector<values> v, w;
+    vector<values>::iterator beginning, ending;
+    
+    int intarr[SIZE] = {1, 11, 3, 3, 2, 6, 9, 7, 9, 4};
+    double doublearr[SIZE] = {1.34, 3.24, 5.46, 7.68, 7.89, 8.92, 0.93, 9.85, 17.45, 3.33};
+    copy_array_to_vector(intarr, doublearr, v);
     w = v;
+
+    cout << "Here is the unsorted vector: " << endl;
     print_vector(v);
+    cout << endl;
+
     beginning = v.begin();
     ending = v.end();
-    sort(beginning, ending);
+    sort(beginning, ending, cmpint);
+    cout << "Vector sorted ascending by integers: " << endl;
     print_vector(v);
-    print_vector(w);
+    cout << endl;
+
     beginning = w.begin();
     ending = w.end();
-    sort(beginning, ending, cmp);
+    sort(beginning, ending, cmpdouble);
+    cout << "Vector sorted descending by doubles: " << endl;
     print_vector(w);
     return 0;
 }
 
-bool cmp(const int &m, const int &n)
+double random( unsigned int &seed)
 {
-    return m>n;
+    const int MODULUS = 15749;
+    const int MULTIPLIER = 69069;
+    const int INCREMENT = 1;
+    seed = ((MULTIPLIER*seed) + INCREMENT) % MODULUS;
+    return double(seed)/double(MODULUS);
+}
+
+void copy_array_to_vector(int intarr[], double doublearr[], vector<values> &v)
+{
+    for(int i=0; i<SIZE; i++)
+    {
+        values node;
+        node.m = intarr[i];
+        node.x = doublearr[i];
+        v.push_back(node);
+    }
+}
+
+void print_vector(vector<values> v)
+{
+    cout << "m: ";
+    for(int i=0; i<v.size(); i++)
+    {
+        int data = v[i].m;
+        cout << setw(7) << data;
+    }
+    cout << endl;
+    cout << "x: ";
+    for(int i=0; i<v.size(); i++)
+    {
+        double data = v[i].x;
+        cout << setw(7) << data;
+    }
+    cout << endl;
+}
+
+bool cmpint(const values& lhs, const values& rhs)
+{
+    return lhs.m < rhs.m;
+}
+
+bool cmpdouble(const values& lhs, const values& rhs)
+{
+    return lhs.x > rhs.x;
 }
