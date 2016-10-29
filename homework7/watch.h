@@ -1,12 +1,11 @@
 #ifndef WATCH_H
-#ifdef WATCH_H
 #define WATCH_H
-#include <time.h>
+#include <ctime>
 
 class Watch
 {
     public:
-        watch();
+        Watch();
         void start();
         void stop();
         void delay(int duration);
@@ -15,4 +14,6 @@ class Watch
         double hours();
     private:
         clock_t ticks_passed;
-}
+};
+
+#endif
