@@ -27,10 +27,12 @@ stop_watch1.start();
 push_vector(v);
 stop_watch1.stop();
 cout << "Pushing ten thousand random integers by seeding with time and pushing them back onto the vector required: ";
-cout << stop_watch1.seconds() << " seconds." << endl << endl;
+cout << stop_watch1.seconds() << " seconds." << endl;
+int size_of_v = v.size();
+cout << "The size of the vector is: " << size_of_v << endl << endl;
 
 empty_vector(v);
-int size_of_v = v.size();
+size_of_v = v.size();
 cout << "The size of the vector is: " << size_of_v << endl << endl;
 
 Watch stop_watch2;
@@ -38,7 +40,9 @@ stop_watch2.start();
 insert_vector(v);
 stop_watch2.stop();
 cout << "Pushing ten thosuand random integers by seeding with time and inserting them at the beginning of the vector required: ";
-cout << stop_watch2.seconds() << " seconds." << endl << endl;
+cout << stop_watch2.seconds() << " seconds." << endl;
+size_of_v = v.size();
+cout << "The size of the vector is: " << size_of_v << endl << endl;
 
 empty_vector(v);
 size_of_v = v.size();
@@ -50,7 +54,8 @@ read_vector(v);
 stop_watch3.stop();
 cout << "Reading ten thousand random integers from a file and pushing them onto the vector required: ";
 cout << stop_watch3.seconds() << " seconds." << endl;
-
+size_of_v = v.size();
+cout << "The size of the vector is: " << size_of_v << endl << endl;
 
 return 0;
 }
@@ -80,7 +85,7 @@ void insert_vector(vector<int> &v)
     for(int i=0; i<10000; ++i)
     {
         new_integer = int(1+10*random(seed));
-        v.insert(v.begin(), new_integer, new_integer+1);
+        v.insert(v.begin(), new_integer);
     }
 }
 
