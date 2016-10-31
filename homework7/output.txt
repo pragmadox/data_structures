@@ -1,0 +1,18 @@
+$ g++ watch.h watch.cpp
+ homework7.cpp -o homework7
+$ ./homework7          
+Pushing ten thousand random integers by seeding with time and pushing 
+them back onto the vector required: 0.000443 seconds.                             
+The size of the vector is: 10000                                            
+                                                                            
+The size of the vector is: 0                                                
+                                                                            
+Pushing ten thosuand random integers by seeding with time and 
+inserting them at the beginning of the vector required: 0.011978 seconds.                 
+The size of the vector is: 10000                                            
+                                                                            
+The size of the vector is: 0                                                
+                                                                            
+Reading ten thousand random integers from a file and pushing them 
+onto the vector required: 0.001334 seconds.                                           
+The size of the vector is: 10000 
