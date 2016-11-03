@@ -35,8 +35,20 @@ int main()
     vector<values> v, w;
     vector<values>::iterator beginning, ending;
     
-    int intarr[SIZE] = {1, 11, 3, 3, 2, 6, 9, 7, 9, 4};
-    double doublearr[SIZE] = {1.34, 3.24, 5.46, 7.68, 7.89, 8.92, 0.93, 9.85, 17.45, 3.33};
+    intarr[SIZE];
+    for(int i=0; i<SIZE, i++)
+    {
+        local_data = int(10*random(seed));
+        intarr[i] = local_data;
+    }
+
+    doublearr[SIZE];
+    for(int i=0; i<SIZE, i++)
+    {
+        local_data = double(10*random(seed));
+        doublearr[i] = local_data;
+    }
+
     copy_array_to_vector(intarr, doublearr, v);
     w = v;
 

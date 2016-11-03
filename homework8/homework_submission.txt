@@ -107,6 +107,8 @@ bool cmpdouble(const values& lhs, const values& rhs)
     return lhs.x > rhs.x;
 }
 
+Test Output:
+
 $ g++ homework8.cpp -o homework8
 $ ./homework8                                                                                                                     
 Here is the unsorted vector:    
