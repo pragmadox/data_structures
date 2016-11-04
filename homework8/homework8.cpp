@@ -34,18 +34,21 @@ int main()
 {
     vector<values> v, w;
     vector<values>::iterator beginning, ending;
+
+    int intarr[SIZE];
+    double doublearr[SIZE];
     
-    intarr[SIZE];
-    for(int i=0; i<SIZE, i++)
+    for(int i=0; i<SIZE; i++)
     {
-        local_data = int(10*random(seed));
+        int local_data;
+        local_data = int(20*random(seed));
         intarr[i] = local_data;
     }
 
-    doublearr[SIZE];
-    for(int i=0; i<SIZE, i++)
+    for(int i=0; i<SIZE; i++)
     {
-        local_data = double(10*random(seed));
+        double local_data;
+        local_data = double(20*random(seed));
         doublearr[i] = local_data;
     }
 
@@ -97,14 +100,14 @@ void print_vector(vector<values> v)
     for(int i=0; i<v.size(); i++)
     {
         int data = v[i].m;
-        cout << setw(7) << data;
+        cout << setw(9) << data;
     }
     cout << endl;
     cout << "x: ";
     for(int i=0; i<v.size(); i++)
     {
         double data = v[i].x;
-        cout << setw(7) << data;
+        cout << setw(9) << data;
     }
     cout << endl;
 }
