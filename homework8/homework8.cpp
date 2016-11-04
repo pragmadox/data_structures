@@ -96,18 +96,18 @@ void copy_array_to_vector(int intarr[], double doublearr[], vector<values> &v)
 
 void print_vector(vector<values> v)
 {
-    cout << "m: ";
-    for(int i=0; i<v.size(); i++)
-    {
-        int data = v[i].m;
-        cout << setw(9) << data;
-    }
+    cout << setw(12) << "m:";
+    cout << setw(12) << "x:";
     cout << endl;
-    cout << "x: ";
     for(int i=0; i<v.size(); i++)
     {
-        double data = v[i].x;
-        cout << setw(9) << data;
+        int intdata = v[i].m;
+        cout << setw(12) << intdata;
+
+        double doubledata = v[i].x;
+        cout << setw(12) << doubledata;
+
+        cout << endl;
     }
     cout << endl;
 }
