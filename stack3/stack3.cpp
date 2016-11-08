@@ -1,4 +1,11 @@
-//File: stack3.cpp
+/* 
+    Jay Price
+    Data Structures
+    November 2, 2016
+    Stack version 3
+    Description: Stack implementation using arrays with dynamically allocated size.
+    File: stack3.cpp
+*/
 
 #include <stdio.h>
 #include <stdlib.h> //for dynamic allocation
@@ -6,7 +13,7 @@
 #include "stack3.h"
 
 
-void stack::initialize_stack(stack *stack_pointer, int max_size)
+void Stack::initialize_stack(stack *stack_pointer, int max_size)
 {
     stack_element *new_data;
     new_data = (stack_element *)malloc(sizeof(stack_element)*max_size);
@@ -16,7 +23,7 @@ void stack::initialize_stack(stack *stack_pointer, int max_size)
     stack_pointer -> stack_top_index=-1;
 }
 
-void stack::destroy_stack(stack *stack_pointer)
+void Stack::destroy_stack(stack *stack_pointer)
 {
     //get rid of array
     free(stack_pointer -> data);

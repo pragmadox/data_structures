@@ -1,14 +1,17 @@
-/* Stack version 3
-Stack implementation using arrays with dynamically allocated size.
+/* 
+    Jay Price
+    Data Structures
+    November 2, 2016
+    Stack version 3
+    Description: Stack implementation using arrays with dynamically allocated size.
+    File: stack3.h
 */
-
-//File: stack3.h 
 
 #ifndef STACK_H
 #define STACK_H
 
 typedef char stack_element;
-typedef struct stack
+typedef struct Stack
 {
     stack_element *data;
     int max_size;
