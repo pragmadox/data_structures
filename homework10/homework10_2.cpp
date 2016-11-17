@@ -107,16 +107,27 @@ void build_structure(structure_pointer new_value, structure_pointer p)
 void print_structure(structure_pointer p, int width)
 {
     cout << setw(width) << right << p->int_data;
-    cout << endl;
     width = width/2;
-    if(p->right!=NULL)
-    {
-        p=p->right;
-        print_structure(p,width);
-    }
+    structure_pointer place_holder;
+    place_holder = p;
     if(p->left!=NULL)
     {
         p=p->left;
         print_structure(p,width);
+        p=place_holder;
     }
+    else
+        cout << setw(width) << right << "";
+    if(p->right!=NULL)
+    {
+        p=p->right;
+        print_structure(p,width);
+        p=place_holder;
+    }
+    else
+    {
+        cout << setw(width) << right << "";
+    }
+    cout << endl;
+   
 }
