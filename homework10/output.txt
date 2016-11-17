@@ -52,7 +52,7 @@ int main()
         cout << "The new value is: " << new_value->int_data << endl;
         build_structure(new_value,p);
     }
-
+    
     print_structure(p, width);
 
 }
@@ -120,3 +120,43 @@ void print_structure(structure_pointer p, int width)
         print_structure(p,width);
     }
 }
+
+2 Example Test outputs:
+
+$ g++ homework10.cpp -o homework10
+$ ./homework10
+The new value is: 8
+The new value is: 18
+The new value is: 4
+The new value is: 13
+The new value is: 1
+The new value is: 11
+                                                               0
+                              18
+              17
+       5
+   4
+ 1
+       6
+   8
+13
+11
+
+$ ./homework10
+The new value is: 6
+The new value is: 13
+The new value is: 4
+The new value is: 6
+The new value is: 1
+The new value is: 4
+The new value is: 10
+The new value is: 1
+The new value is: 9
+                                                               8
+                               6
+               4
+       1
+   1
+       1
+               4
+                               6
