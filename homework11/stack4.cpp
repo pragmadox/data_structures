@@ -1,3 +1,13 @@
+/*  
+    Jay Price
+    Data Structures
+    Homework 11
+    Due Date: November 21, 2014
+    Date: November 21, 2014
+    Description: Add a 'top' function for the stack that returns the top element without removing it.
+    File: stack4.cpp
+*/
+
 //File: stack4.cpp
 #include <iostream>
 #include <iomanip>
@@ -41,7 +51,7 @@ void push(stack *stack_pointer, stack_element element)
 
 stack_element pop(stack *stack_pointer)
 {
-    if(is_empty(stack_pointer))
+    if(isempty(stack_pointer))
     {
         cerr << "Cannot pop from stack. Stack is empty." << endl;
         exit(1);
@@ -49,12 +59,22 @@ stack_element pop(stack *stack_pointer)
     return stack_pointer->data[stack_pointer->stack_top_index--];
 }
 
-int is_empty(stack *stack_pointer)
+int isempty(stack *stack_pointer)
 {
-    return stack_pointer->stack_top_index;
+    return !(stack_pointer->stack_top_index+1);
 }
 
 int is_full(stack *stack_pointer)
 {
     return stack_pointer->stack_top_index>=stack_pointer->max_size-1;
+}
+
+stack_element top(stack *stack_pointer)
+{   
+    if(isempty(stack_pointer))
+    {
+        cerr << "Cannot pop from stack. Stack is empty." << endl;
+        exit(1);
+    }
+    return stack_pointer->data[stack_pointer->stack_top_index];    
 }
