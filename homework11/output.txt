@@ -1,0 +1,18 @@
+3 Test Outputs:
+
+$ g++ stack4.h stack4.cpp stack4driver.cpp -o stack4
+$ ./stack4
+       Enter a string: This is a test.
+The top of the stack is: .
+The top of the stack is: .
+Popped characters are:  . t s e t   a   s i   s i h T
+$ ./stack4
+       Enter a string: ABCDEFGHIJKL
+The top of the stack is: L
+The top of the stack is: L
+Popped characters are:  L K J I H G F E D C B
+$ ./stack4
+       Enter a string: This is the last test.
+The top of the stack is: .
+The top of the stack is: .
+Popped characters are:  . t s e t   t s a l   e h t   s i   s i h T
