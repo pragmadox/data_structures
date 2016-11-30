@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "maze.h"
+#include "stack6.h"
 
 using namespace std;    
 
@@ -239,8 +240,25 @@ int Maze::solve(int x, int y)
         //If success is achieved the function will print each x and y coordinate along
         //the route.
         if(success>0)
-            cout << "The x and y coordinates are: " << x << ", " << y << endl;
+        {
+            coords coord_point;
+            coord_point.x = x;
+            coord_point.y = y;
+            coord_stack.push(coord_point);
+        }
+
     //The function will either loop indefinitely or return success (assuming the maze
     //is navigable.)
     return success;
+}
+
+void Maze::print_coordinates()
+{
+    cout << "The path from entry to exit consists of the following points: " << endl;
+    while(!coord_stack.is_empty())
+    {
+        coords point;
+        point = coord_stack.pop();
+        cout << "The x and y coordinates are: " << point.x << ", " << point.y << endl;;
+    }
 }
