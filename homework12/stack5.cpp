@@ -1,4 +1,18 @@
-//File: stack5.cpp
+/*  
+    Jay Price
+    Data Structures
+    Homework 12
+    Due Date: December 1, 2016
+    Date: November 25, 2016
+    Description: 
+    - Read a string from input 
+    - Push characters from the string on s1
+    - Pop characters from s1
+    - Output them to the screen
+    Use the class-based implementation of the stack defined in class.
+    File: stack5.cpp
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>
