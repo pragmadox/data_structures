@@ -8,7 +8,6 @@
     File: stack4.cpp
 */
 
-//File: stack4.cpp
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>

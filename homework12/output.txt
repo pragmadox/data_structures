@@ -1,0 +1,11 @@
+$ g++ stack5.h stack5.cpp stack5driver.cpp -o stack5
+$ ./stack5
+       Enter a string: This is a test.
+The top of the stack is: .
+The top of the stack is: .
+Popped characters are:  . t s e t   a   s i   s i h T
+$ ./stack5
+       Enter a string: 1 2 3 4 5 6 7 8 9 10
+The top of the stack is: 0
+The top of the stack is: 0
+Popped characters are:  0 1   9   8   7   6   5   4   3   2   1
