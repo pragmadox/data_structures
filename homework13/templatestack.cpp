@@ -17,7 +17,7 @@ stack::stack()
 void stack::initialize_stack(int size)
 {
     variable *new_data;
-    new_data=(variable *)malloc(sizeof(variable)*size);
+    new_data=(variable*)malloc(sizeof(variable)*size);
     if(new_data==NULL)
     {
         cerr << "Insufficient memory." << endl;
