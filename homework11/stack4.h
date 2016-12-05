@@ -5,7 +5,7 @@
     Due Date: November 21, 2014
     Date: November 21, 2014
     Description: Add a 'top' function for the stack that returns the top element without removing it.
-    File: stack4.cpp
+    File: stack4.h
 */
 
 #ifndef STACK_H

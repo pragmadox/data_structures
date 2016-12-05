@@ -1,4 +1,12 @@
-//File: stack5driver.cpp
+/*  
+    Jay Price
+    Data Structures
+    Homework 13
+    Due Date: December 5, 2016
+    Date: December 1, 2016
+    Description: Demonstrate the driver class from class with a struct of x and y coordinates.
+    File: templatestackdriver.cpp
+*/
 #include <iostream>
 #include <iomanip>
 #include <stdio.h>

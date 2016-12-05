@@ -1,4 +1,12 @@
-//File: stack5.cpp
+/*  
+    Jay Price
+    Data Structures
+    Homework 13
+    Due Date: December 5, 2016
+    Date: December 1, 2016
+    Description: Test the template class using an integer and char stack.
+    File: templatestack.h
+*/
 #ifndef STACK_H
 #define STACK_H
 
