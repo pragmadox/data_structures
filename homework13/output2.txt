@@ -1,0 +1,58 @@
+Demonstrating an integer and character stack:
+
+$ g++ templatestack.h templatestackdriver2.cpp -o templatestack
+$ ./templatestack
+is_empty = 1
+is_full = 1
+is_empty = 1
+is_full = 0
+  1. New random integer =       6
+  2. New random integer =       1
+  3. New random integer =       9
+  4. New random integer =       5
+  5. New random integer =       8
+  6. New random integer =       9
+  7. New random integer =       0
+  8. New random integer =       2
+  9. New random integer =       6
+ 10. New random integer =       2
+-------------------------------------------
+Removing elements from the stack:
+  1.       2
+  2.       6
+  3.       2
+  4.       0
+  5.       9
+  6.       8
+  7.       5
+  8.       9
+  9.       1
+ 10.       6
+
+Creating a character stack and testing functions:
+is_empty = 1
+is_full = 1
+is_empty = 1
+is_full = 0
+  1. New random integer =       x
+  2. New random integer =       v
+  3. New random integer =       v
+  4. New random integer =       b
+  5. New random integer =       z
+  6. New random integer =       m
+  7. New random integer =       x
+  8. New random integer =       o
+  9. New random integer =       l
+ 10. New random integer =       j
+-------------------------------------------
+Removing elements from the stack:
+  1.       j
+  2.       l
+  3.       o
+  4.       x
+  5.       m
+  6.       z
+  7.       b
+  8.       v
+  9.       v
+ 10.       x

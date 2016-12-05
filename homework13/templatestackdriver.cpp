@@ -45,7 +45,7 @@ int main( )
       cout << "    p.y = " << setw(7) << p.y;
       cout << endl;
       s.push(p);
-   }s
+   }
 
    cout << "-------------------------------------------" << endl;
    cout << "Removing elements from the stack: " << endl;
