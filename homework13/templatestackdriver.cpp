@@ -8,33 +8,63 @@
 
 using namespace std;
 
+unsigned int seed = 7;
+
+double random(unsigned int&seed);
+
+typedef struct
+{
+    double x, y;
+} point;
+
+
 int main()
 {
-    stack<char> stack1;
-    const char *traverse; //pointer used to traverse the user string.
-    const char *user_string; //string entered by the user;
-    cout << setw(23) << "Enter a string: ";
-    string str;
-    getline(cin, str);
-    user_string = str.c_str();
-    stack1.initialize_stack(strlen(user_string));
-    /*Traverse the string and put each
-    character on the stack.
-    */
-    for(traverse=user_string; *traverse!='\0'; traverse++)
-        stack1.push(*traverse);
-    /* Demonstrate the top function.
-    */
-    cout << "The top of the stack is: ";
-    cout << stack1.top() << endl;
+    int i;
+    char ch;
+    point p;
+    Stack<point> s;
 
-    cout << "The top of the stack is: ";
-    cout << stack1.top() << endl;
+    cout << "is_empty = " << s.is_empty( ) << endl;
+    cout << "is_full = " << s.is_full( ) << endl;
 
-    cout << "Popped characters are: ";
-    while(!stack1.is_empty())
-        cout << setw(2) << stack1.pop();
-    stack1.destroy_stack();
-    cout << endl;
-    return 0;
+    s.initialize_stack(10);
+
+    cout << "is_empty = " << s.is_empty( ) << endl;
+    cout << "is_full = " << s.is_full( ) << endl;
+
+    cout << fixed << right << setprecision(3);
+
+    i = 0;
+
+    while(!s.is_full( ))
+    {
+        cout << setw(3) << ++i << ". ";
+        p.x = random(seed);
+        p.y = random(seed);
+        cout << "p.x = " << setw(5) << p.x;
+        cout << " p.y = " << setw(5) << p.y;
+        cout << endl;
+        s.push(p);
+    }
+
+    i = 0;
+    while(!s.is_empty( ))
+    {
+        cout << setw(3) << ++i << ". ";
+        p = s.pop( );
+        cout << "p.x = " << setw(5) << p.x;
+        cout << " p.y = " << setw(5) << p.y;
+        cout << endl;
+    }
+    return(0);
+}
+
+double random(unsigned int&seed)
+{
+   const int MODULUS = 15749;
+   const int MULTIPLIER = 69069;
+   const int INCREMENT = 1;
+   seed = ((MULTIPLIER * seed) + INCREMENT) % MODULUS;
+   return (double) seed / double (MODULUS);
 }
