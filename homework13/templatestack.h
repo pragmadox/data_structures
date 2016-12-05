@@ -17,8 +17,6 @@
 
 using namespace std;
 
-using namespace std;
-
 template <class variable>
 class stack
 {

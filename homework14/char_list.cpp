@@ -73,3 +73,70 @@ bool char_list::at_end()
                 else 
                     return FALSE;
 }
+
+void char_list::next()
+{
+    if(current!=NULL)
+    {
+        previous = current;
+        current = current->next;
+    }
+}
+
+void char_list::first()
+{
+    current = head;
+    previous = NULL;
+}
+
+void char_list::insert(const char &item)
+{
+    node_ptr new_node=get_node(item);
+    new_node->next = current;
+    if(current==head)
+        head = new_node;
+        else
+            previous->next = new_node;
+    current = new_node;
+    ++list_length; 
+}
+
+bool char_list::remove(char &item)
+{
+    node_ptr old_node = current;
+    bool success = TRUE;
+    if(current=NULL)
+        success = FALSE;
+        else
+        {
+            item = current->data;
+            if(current==head)
+                head = current->next;
+                else
+                    previous->next = current->next;
+            current = current->next;
+            delete old_node;
+            --list_length;
+        }
+    return sucess;
+}
+
+bool char_list::retrieve(char &item)
+{
+    bool success=TRUE;
+    if(current==NULL)
+        success=FALSE;
+        else
+            item=current->data;
+    return sucess;
+}
+
+char_list::node_ptr char_list::get_node(const char &item)
+{
+    node_ptr temp = new_node;
+    assert(temp!=NULL)
+    temp->data = item;
+    temp->next = NULL;
+    return temp;
+}
+

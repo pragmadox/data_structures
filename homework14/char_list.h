@@ -1,10 +1,16 @@
 //File: char_list.h 
 
 #ifndef CHAR_LIST_H
+#define CHAR_LIST_H
+
+#include <iostream>
+#include <iomanip>
+#include <stdio.h>
+#include <stdlib.h>
 
 class char_list
 {
-    publc:
+    public:
         char_list();
         char_list(const char_list $source);
         ~char_list();
@@ -30,9 +36,6 @@ class char_list
         int list_length;
         node_ptr head, current, previous;
         node_ptr get_node(const char &item);
-}
-#define CHAR_LIST_H
-#endif
-        
+};
 
-}
+#endif
