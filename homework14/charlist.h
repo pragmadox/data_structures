@@ -27,6 +27,7 @@ class charlist
       void print();
       int find_first(char item);
       int find_last(char item);
+      void remove_matching(char item);
       char get_index(int);
       charlist& operator= (const charlist&source);
       

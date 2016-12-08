@@ -62,6 +62,13 @@ main( )
    element = list.get_index(index);
    cout << "The character at index " << index << " is: " << element << endl;
 
+   char search;
+   cout << endl << "Enter the character to remove from the list: ";
+   cin >> search;
+   cout << endl;
+   list.remove_matching(search);
+   list.print();
+
 }
 
 double random(unsigned int&seed)
