@@ -23,7 +23,7 @@ int main()
     int i;
     char ch;
     point p;
-    Stack<point> s;
+    stack<point> s;
 
     cout << "is_empty = " << s.is_empty( ) << endl;
     cout << "is_full = " << s.is_full( ) << endl;

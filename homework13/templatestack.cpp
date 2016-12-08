@@ -7,6 +7,8 @@
 
 using namespace std;
 
+template <class variable>
+
 stack::stack()
 {
     data = NULL;
