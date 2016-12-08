@@ -1,3 +1,5 @@
+Example output:
+
 $ g++ homework9.cpp -o homework9
 $ ./homework9
 ----------------------

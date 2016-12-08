@@ -1,0 +1,30 @@
+Demonstrate the driver file shown in class:
+
+$ g++ templatestack.h templatestackdriver.cpp -o templatestack
+$ ./templatestack
+is_empty = 1
+is_full = 1
+is_empty = 1
+is_full = 0
+  1. p.x =   0.699    p.y =   0.128
+  2. p.x =   0.936    p.y =   0.532
+  3. p.x =   0.812    p.y =   0.903
+  4. p.x =   0.014    p.y =   0.220
+  5. p.x =   0.687    p.y =   0.248
+  6. p.x =   0.886    p.y =   0.827
+  7. p.x =   0.822    p.y =   0.058
+  8. p.x =   0.992    p.y =   0.485
+  9. p.x =   0.917    p.y =   0.548
+ 10. p.x =   0.444    p.y =   0.354
+-------------------------------------------
+Removing elements from the stack:
+  1. p.x =   0.444    p.y =   0.354
+  2. p.x =   0.917    p.y =   0.548
+  3. p.x =   0.992    p.y =   0.485
+  4. p.x =   0.822    p.y =   0.058
+  5. p.x =   0.886    p.y =   0.827
+  6. p.x =   0.687    p.y =   0.248
+  7. p.x =   0.014    p.y =   0.220
+  8. p.x =   0.812    p.y =   0.903
+  9. p.x =   0.936    p.y =   0.532
+ 10. p.x =   0.699    p.y =   0.128
