@@ -1,19 +1,20 @@
 /*
  * Jay Price
- * December 7, 2016
+ * Data Structures Final
+ * December 12, 2016
  * Data Structures
  *
  */
 
-#ifndef CHARLIST_H
-#define CHARLIST_H
+#ifndef LIST_CHAR_H
+#define LIST_CHAR_H
 
-class charlist
+class list_char
 {
    public:
-      charlist( );
-      charlist(const charlist&source);
-      ~charlist( );
+      list_char( );
+      list_char(const list_char&source);
+      ~list_char( );
       //member functions
       bool empty( );
       bool at_end( );
@@ -29,7 +30,7 @@ class charlist
       int find_last(char item);
       void remove_matching(char item);
       char get_index(int);
-      charlist& operator= (const charlist&source);
+      list_char& operator= (const list_char&source);
       
    private:
       struct node

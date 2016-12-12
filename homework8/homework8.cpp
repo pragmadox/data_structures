@@ -1,8 +1,9 @@
 /* 
     Jay Price
-    Data valuess
+    Data Structures
     Homework 8
     October 30, 2016
+    File: homework8.cpp
 */
 
 #include <limits.h>

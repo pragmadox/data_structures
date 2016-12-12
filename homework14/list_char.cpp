@@ -1,6 +1,7 @@
 /*
  * Jay Price
- * December 7, 2016
+ * Data Structures Final
+ * December 12, 2016
  * Data Structures
  *
  */
@@ -9,11 +10,11 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstdlib>
-#include "charlist.h"
+#include "list_char.h"
 
 using namespace std;
 
-charlist::charlist()
+list_char::list_char()
 {
       head = NULL;
       current = NULL;
@@ -21,7 +22,7 @@ charlist::charlist()
       list_length = 0;
 }
 
-charlist::charlist(const charlist &list)
+list_char::list_char(const list_char &list)
 {
       node_ptr probe = list.head;
       while (probe != NULL)
@@ -32,7 +33,7 @@ charlist::charlist(const charlist &list)
       }
 }
 
-charlist::~charlist()
+list_char::~list_char()
 {
       node_ptr garbage;
       node_ptr probe = head;
@@ -48,7 +49,7 @@ charlist::~charlist()
       previous = NULL;
 }
 
-charlist &charlist::operator=(const charlist &list)
+list_char &list_char::operator=(const list_char &list)
 {
       node_ptr probe = list.head;
       while (probe != NULL)
@@ -60,17 +61,17 @@ charlist &charlist::operator=(const charlist &list)
       return *this;
 }
 
-bool charlist::empty()
+bool list_char::empty()
 {
       return (list_length == 0);
 }
 
-int charlist::length()
+int list_char::length()
 {
       return (list_length);
 }
 
-bool charlist::at_end()
+bool list_char::at_end()
 {
       if (current == NULL)
             return (true);
@@ -83,7 +84,7 @@ bool charlist::at_end()
       }
 }
 
-void charlist::next()
+void list_char::next()
 {
       if (current != NULL)
       {
@@ -92,13 +93,13 @@ void charlist::next()
       }
 }
 
-void charlist::first()
+void list_char::first()
 {
       current = head;
       previous = NULL;
 }
 
-void charlist::insert(const char &item)
+void list_char::insert(const char &item)
 {
       node_ptr new_node = get_node(item);
       new_node->next = current;
@@ -110,7 +111,7 @@ void charlist::insert(const char &item)
       ++list_length;
 }
 
-bool charlist::remove(char &item)
+bool list_char::remove(char &item)
 {
       node_ptr old_node = current;
       bool success = true;
@@ -130,7 +131,7 @@ bool charlist::remove(char &item)
       return (success);
 }
 
-bool charlist::retrieve(char &item)
+bool list_char::retrieve(char &item)
 {
       bool success = true;
       if (current == NULL)
@@ -140,7 +141,7 @@ bool charlist::retrieve(char &item)
       return (success);
 }
 
-charlist::node_ptr charlist::get_node(const char &item)
+list_char::node_ptr list_char::get_node(const char &item)
 {
       node_ptr temp = new node;
       assert(temp != NULL);
@@ -149,7 +150,7 @@ charlist::node_ptr charlist::get_node(const char &item)
       return (temp);
 }
 
-void charlist::print()
+void list_char::print()
 {
       char item;
       bool success;
@@ -169,11 +170,9 @@ void charlist::print()
       first();
 }
 
-int charlist::find_last(char search)
+int list_char::find_last(char search)
 {
-      bool in_list = false;
       char element;
-      bool success;
       int index = -1;
       first();
       for (int i = 0; i < list_length; i++)
@@ -181,8 +180,6 @@ int charlist::find_last(char search)
             success = retrieve(element);
             if (element == search)
             {
-                  in_list = true;
-                  in_list = false;
                   index = i;
                   next();
             }
@@ -194,24 +191,22 @@ int charlist::find_last(char search)
             cout << "The character '" << search << "' was found in the list." << endl;
       else
       {
-            cout << search << " was not found in the list." << endl;
+            cout << "The character '" << search << "' was not found in the list." << endl;
             exit(1);
       }
       first();
       return (index);
 }
 
-int charlist::find_first(char search)
+int list_char::find_first(char search)
 {
       bool in_list = false;
       char element;
-      bool success;
       int index = 0;
       first();
-
       while (!at_end())
       {
-            success = retrieve(element);
+            retrieve(element);
             if (element == search)
             {
                   in_list = true;
@@ -238,7 +233,7 @@ int charlist::find_first(char search)
       return (index);
 }
 
-char charlist::get_index(int index)
+char list_char::get_index(int index)
 {
       char element;
       first();
@@ -261,7 +256,7 @@ char charlist::get_index(int index)
       exit(1);
 }
 
-void charlist::remove_matching(char search)
+void list_char::remove_matching(char item)
 {
       bool in_list = false;
       char element;
@@ -271,7 +266,7 @@ void charlist::remove_matching(char search)
       while (!at_end())
       {
             retrieve(element);
-            if (element == search)
+            if (element == item)
             {
                   in_list = true;
                   remove(element);
@@ -281,7 +276,7 @@ void charlist::remove_matching(char search)
                   next();
       }
       retrieve(element);
-      if (element == search)
+      if (element == item)
       {
             in_list = true;
             remove(element);
